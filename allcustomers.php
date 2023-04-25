@@ -20,7 +20,10 @@ $result =mysqli_query($conn, $query);
             flex: 1;
             text-align: center;
         }
-
+        #brand{
+            font-size: 30px;
+            color: purple;
+        }
         .content {
             border-collapse: collapse;
             margin: 25px 0;

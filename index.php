@@ -63,7 +63,7 @@
         <div class="col services-col">
             <h3>Transaction History</h3>
             <p>View all your previous Transactions.<p>
-                <button class="btn" style="background-color: #ffb93f;" onclick="window.location.href = 'transaction-history.php';">Transactions</button>
+                <button class="btn" style="background-color: #ffb93f;" onclick="window.location.href = 'transactions.php';">Transactions</button>
 
         </div>
     </div>

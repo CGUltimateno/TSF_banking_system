@@ -18,6 +18,10 @@ $result = mysqli_query($conn, $query);
         h1{
             text-align: center;
         }
+        #brand{
+            font-size: 30px;
+            color: purple;
+        }
         .title{
             font-size: 2.4rem;
             font-weight: 800;

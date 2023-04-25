@@ -14,6 +14,10 @@
             height: 50px;
             padding: 5px 5px 5px 15px;
         }
+        #brand{
+            font-size: 30px;
+            color: purple;
+        }
         td {
             padding-top: 10px;
             padding-bottom: 10px;
