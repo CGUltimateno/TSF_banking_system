@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 05:46 PM
+-- Generation Time: Apr 26, 2023 at 06:46 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -28,7 +28,6 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customer` (
-  `sr_no` int(255) NOT NULL,
   `account_no` int(255) NOT NULL,
   `name` text NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -39,17 +38,17 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`sr_no`, `account_no`, `name`, `email`, `current_balance`) VALUES
-(1, 123421, 'Ahmed Mohamed', 'am12q@gmail.com', 36000),
-(2, 123422, 'Omar Mahmoud', 'OmarMah123@gmail.com', 112000),
-(3, 123423, 'Mona Mansour', 'Monaaa111@gmail.com', 32000),
-(4, 123424, 'Mena Ahmed', 'MenaAhmed22@gmail.com', 10000),
-(5, 123425, 'Romany Emad', 'Roooo18492@gmail.com', 56400),
-(6, 123426, 'Mortada Mansour', 'Mortadamortada1232@gmail.com', 74230),
-(7, 123427, 'Sarah Mahmoud', 'SarahMahmoud3214@gmail.com', 32700),
-(8, 123427, 'Retag Samir', 'Ratogaa1235@gmail.com', 68600),
-(9, 123428, 'Tarek Badr', 'Tarekbusiness1245@gmail.com', 200000),
-(10, 123429, 'Amr Mohamed', 'Amramramr23526@gmail.com', 244000);
+INSERT INTO `customer` (`account_no`, `name`, `email`, `current_balance`) VALUES
+(123421, 'Ahmed Mohamed', 'am12q@gmail.com', 36100),
+(123422, 'Omar Mahmoud', 'OmarMah123@gmail.com', 111900),
+(123423, 'Mona Mansour', 'Monaaa111@gmail.com', 32000),
+(123424, 'Mena Ahmed', 'MenaAhmed22@gmail.com', 10000),
+(123425, 'Romany Emad', 'Roooo18492@gmail.com', 56400),
+(123426, 'Mortada Mansour', 'Mortadamortada1232@gmail.com', 74230),
+(123427, 'Sarah Mahmoud', 'SarahMahmoud3214@gmail.com', 32700),
+(123428, 'Retag Samir', 'Ratogaa1235@gmail.com', 68600),
+(123429, 'Tarek Badr', 'Tarekbusiness1245@gmail.com', 200000),
+(123430, 'Amr Mohamed', 'Amramramr23526@gmail.com', 244000);
 
 -- --------------------------------------------------------
 
@@ -75,7 +74,12 @@ INSERT INTO `transactions` (`sender`, `receiver`, `amount`, `status`, `Dat`) VAL
 (18272663, 282882828, 1929838, 'failed', '2023-04-17 21:36:44'),
 (123421, 123422, 12000, 'succeed', '2023-04-25 17:38:06'),
 (123421, 123424, 3000, 'failed', '2023-04-25 17:39:37'),
-(123422, 123421, 12333, 'failed', '2023-04-25 17:39:45');
+(123422, 123421, 12333, 'failed', '2023-04-25 17:39:45'),
+(123422, 123421, 30000, 'failed', '2023-04-26 06:21:08'),
+(123422, 123421, 100, 'failed', '2023-04-26 06:23:39'),
+(123422, 123421, 100, 'succeed', '2023-04-26 06:24:49'),
+(123422, 123421, 100, 'succeed', '2023-04-26 06:30:28'),
+(123422, 123421, 100, 'succeed', '2023-04-26 06:40:17');
 
 --
 -- Indexes for dumped tables
@@ -85,17 +89,7 @@ INSERT INTO `transactions` (`sender`, `receiver`, `amount`, `status`, `Dat`) VAL
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`sr_no`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `customer`
---
-ALTER TABLE `customer`
-  MODIFY `sr_no` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  ADD PRIMARY KEY (`account_no`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
