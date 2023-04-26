@@ -125,20 +125,20 @@ else{
             if($result1 && $result2){
                 echo'<div class="alert alert-success align-items-center text-center" style="width:50%;" role="alert">
                 <div>
-                <h2><i class="fas fa-check-circle"></i>
+                <h2>
                 Amount Transferred Successfully!</h2></div>
                 </div>
                 </div>';
-                $transfersql =  "INSERT INTO `transactions` (`sender`, `receiver`, `amount`, `status`,`Dat`) VALUES ('$sender', '$receiver', '$amount', 'failed',current_timestamp())";
+                $transfersql =  "INSERT INTO `transactions` (`sender`, `receiver`, `amount`, `status`,`Dat`) VALUES ('$sender', '$receiver', '$amount', 'succeed',current_timestamp())";
                 $transferact =mysqli_query($conn, $transfersql);
             }else{
                 echo'<div class="alert alert-danger d-flex align-items-center" role="alert">
                 <div>
-                <i class="fas fa-times-circle"></i>
+
                 Something went wrong
                 </div>
                </div>';
-                $transfersql =  "INSERT INTO `transactions` (`sender`, `receiver`, `amount`, `status`,`Dat`) VALUES ('$sender', '$receiver', '$amount', 'failed',current_timestamp())";
+                $transfersql =  "INSERT INTO `transactions` (`sender`, `receiver`, `amount`, `status`,`Dat`) VALUES ('$sender', '$receiver', '$amount', 'succeed',current_timestamp())";
                 $transferact =mysqli_query($conn, $transfersql);
             }
         }

@@ -142,7 +142,7 @@ $result = mysqli_query($conn, $query);
                     <td>'.$row['sender'].'</td>
                     <td>'.$row['receiver'].'</td>
                     <td>'.$row['amount'].'</td><td>'; ?>
-                    <?php if ($row['status'] == "success"){ echo '<p style="color: green">Success</p>';}else{ echo'<p style="color: red">Failure</p>';}; ?>
+                    <?php if ($row['status'] == "succeed"){ echo '<p style="color: green">Success</p>';}else{ echo'<p style="color: red">Failure</p>';}; ?>
                     <?php echo '</td></tr>';
               }
               echo "</tbody>";
